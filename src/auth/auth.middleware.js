@@ -1,11 +1,25 @@
 const User = require('../models/User');
 const { verifyToken, COOKIE_NAME } = require('./token.util');
 
+function readTokenFromRequest(req) {
+  const cookieToken = req.cookies?.[COOKIE_NAME];
+  if (cookieToken) return cookieToken;
+
+  const authHeader = req.headers.authorization;
+  if (typeof authHeader === 'string' && authHeader.startsWith('Bearer ')) {
+    return authHeader.slice(7).trim();
+  }
+
+  if (req.query?.token) return req.query.token;
+
+  return null;
+}
+
 // Protects any route it's attached to. A signed-out or invalid-session
 // visitor gets a 401 and never reaches the handler.
 async function protect(req, res, next) {
   try {
-    const token = req.cookies?.[COOKIE_NAME];
+    const token = readTokenFromRequest(req);
 
     if (!token) {
       return res.status(401).json({ error: 'Not authenticated' });
@@ -36,7 +50,7 @@ async function protect(req, res, next) {
 // Sets req.user when a valid session cookie is present; never blocks the request.
 async function optionalProtect(req, res, next) {
   try {
-    const token = req.cookies?.[COOKIE_NAME];
+    const token = readTokenFromRequest(req);
     if (!token) return next();
 
     let payload;

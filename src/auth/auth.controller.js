@@ -3,7 +3,10 @@ const { signToken, COOKIE_NAME, cookieOptions } = require('./token.util');
 
 function sendAuthenticatedUser(res, user, status = 200) {
   const token = signToken(user._id.toString());
-  return res.status(status).cookie(COOKIE_NAME, token, cookieOptions).json({ user });
+  return res
+    .status(status)
+    .cookie(COOKIE_NAME, token, cookieOptions)
+    .json({ user, token });
 }
 
 async function register(req, res, next) {

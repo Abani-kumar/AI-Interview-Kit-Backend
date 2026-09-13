@@ -10,10 +10,11 @@ function verifyToken(token) {
 }
 
 const COOKIE_NAME = 'token';
+// Cross-origin frontend (e.g. Vercel) + API (e.g. Code.run) needs SameSite=None.
 const cookieOptions = {
   httpOnly: true,
   secure: NODE_ENV === 'production',
-  sameSite: 'lax',
+  sameSite: NODE_ENV === 'production' ? 'none' : 'lax',
   maxAge: 7 * 24 * 60 * 60 * 1000,
 };
 

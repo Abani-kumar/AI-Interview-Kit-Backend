@@ -13,9 +13,13 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
+const frontendOrigin = (process.env.FRONTEND_URL || 'http://localhost:3000')
+  .trim()
+  .replace(/\/$/, '');
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+    origin: frontendOrigin,
     credentials: true,
   })
 );
