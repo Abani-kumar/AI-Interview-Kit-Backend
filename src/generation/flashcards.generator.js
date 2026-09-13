@@ -1,0 +1,1 @@
+export function generateFlashcards(requirements) { return requirements.map((r, i) => ({ id: `f${i + 1}`, front: `How would you discuss: ${r.text}?`, back: 'Explain relevant experience, implementation choices, and measurable results.', requirement_ids: [r.id] })); }

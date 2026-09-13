@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Environment (secrets — use .env.example as template)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Test / coverage
+coverage/
+.nyc_output/
+
+# Batch evaluator output (generated artifacts)
+kits.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Optional local overrides
+*.local.json

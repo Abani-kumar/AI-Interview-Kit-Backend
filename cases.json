@@ -1,0 +1,32 @@
+[
+  {
+    "id": "case-phonepe-backend",
+    "jd": "Backend Software Engineer at PhonePe. Build and maintain scalable backend services and APIs using Java, Go, or similar languages. Work with databases, distributed systems, and microservices. Write reliable, maintainable code and collaborate with product and engineering teams. 2+ years of software development experience preferred.",
+    "company_url": "https://www.phonepe.com/",
+    "days": 5
+  },
+  {
+    "id": "case-swiggy-frontend",
+    "jd": "Frontend Software Engineer. Build responsive web applications using React and TypeScript. Work with APIs, state management, testing, and performance optimization. Collaborate with designers, product managers, and backend engineers. Strong communication and problem-solving skills are expected.",
+    "company_url": "https://www.swiggy.com/",
+    "days": 7
+  },
+  {
+    "id": "case-thin-jd",
+    "jd": "Software Engineer. Develop software and work with the engineering team.",
+    "company_url": "https://example.com/",
+    "days": 3
+  },
+  {
+    "id": "case-fintech-backend",
+    "jd": "Senior Backend Engineer for a fintech payments platform. Design reliable distributed services, build APIs, work with SQL databases and event-driven systems, and improve observability. Experience with payment systems is a plus. Communicate technical decisions clearly and mentor engineers.",
+    "company_url": "https://www.phonepe.com/",
+    "days": 10
+  },
+  {
+    "id": "case-long-plan",
+    "jd": "Software Engineer with experience building scalable services. Strong knowledge of Go and/or Java, REST APIs, databases, concurrency, testing, and distributed systems. Experience with cloud infrastructure is preferred. Work closely with product and engineering teams, participate in design discussions, review code, and troubleshoot production issues. Strong ownership, communication, and problem-solving skills. Experience in high-scale consumer products is a plus.",
+    "company_url": "https://www.flipkart.com/",
+    "days": 15
+  }
+]
