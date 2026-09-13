@@ -490,7 +490,8 @@ backend/
 
 | Resource | URL |
 |----------|-----|
-| Frontend Repository | _[add link]_ |
-| Backend Repository | _[add link]_ |
-| Live Demo | _[add link]_ |
+| Frontend Repository | https://github.com/Abani-kumar/AI-Interview-Kit-Frontend |
+| Backend Repository | https://github.com/Abani-kumar/AI-Interview-Kit-Backend |
+| Live Demo (Frontend) | https://ai-interview-kit-frontend-sigma.vercel.app |
+| Live API (Backend) | https://site--ai-interview-prep-kit--hy8lv87svdkr.code.run/api |
 | Walkthrough | _[add link]_ |
